@@ -121,9 +121,9 @@ class ProtoChecker:
 
 				# Comparing item_names with item_proto
 				if cmpItemProto:
-					itemVnum = int(itemVnum)
-					if itemVnum in range(VNUM_RANGE_ITEM_VNUM_START, VNUM_RANGE_ITEM_VNUM_END + 1):
-						itemVnumRange = '{start}{separator}{end}'.format(start=itemVnum, separator=VNUM_RANGE_DELIMITER, end=itemVnum + VNUM_RANGE)
+					intItemVnum = int(itemVnum)
+					if intItemVnum in range(VNUM_RANGE_ITEM_VNUM_START, VNUM_RANGE_ITEM_VNUM_END + 1):
+						itemVnumRange = '{start}{separator}{end}'.format(start=intItemVnum, separator=VNUM_RANGE_DELIMITER, end=intItemVnum + VNUM_RANGE)
 						baseItemVnum = itemVnumRange
 
 					check_diff(baseItemVnum, secondFile['data'])
