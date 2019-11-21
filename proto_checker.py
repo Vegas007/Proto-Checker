@@ -121,6 +121,9 @@ class ProtoChecker:
 
 				# Comparing item_names with item_proto
 				if cmpItemProto:
+					if not itemVnum.isdigit():
+						continue
+
 					intItemVnum = int(itemVnum)
 					if intItemVnum in range(VNUM_RANGE_ITEM_VNUM_START, VNUM_RANGE_ITEM_VNUM_END + 1):
 						itemVnumRange = '{start}{separator}{end}'.format(start=intItemVnum, separator=VNUM_RANGE_DELIMITER, end=intItemVnum + VNUM_RANGE)
