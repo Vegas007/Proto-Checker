@@ -73,7 +73,7 @@ class ProtoChecker:
 		fileData = []
 		vnumRangeSet = set()
 		if fileExists:
-			with open(fileName, 'r') as csv_file:
+			with open(fileName, 'r', encoding="utf-8") as csv_file:
 				csv_reader = csv.reader(csv_file, delimiter='\t')
 				next(csv_reader, None)
 
